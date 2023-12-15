@@ -12,7 +12,7 @@
                 <li class="dropdown"><a class="navbar-top__link" href="#"><span>Posts</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
                         @foreach ( $categories as $category )
-                            <li><a href="{{ $category->id }}">{{ $category->Ten }}</a></li>
+                            <li><a href="{{ route('category.show', ['id' => $category->id]) }}">{{ $category->Ten }}</a></li>
                         @endforeach
                     </ul>
                 </li>

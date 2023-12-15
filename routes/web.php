@@ -3,6 +3,7 @@
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\SessionController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,3 +34,5 @@ Route::post('/sign_up', [RegisterController::class, 'store'])->name('sign_up.sto
 
 Route::get('/post', [PostController::class, 'index'])->name('post.index');
 Route::get('/post/{id}', [PostController::class, 'show'])->name('post.show');
+
+Route::get('/category/{id}', [CategoryController::class, 'show'])->name('category.show');
