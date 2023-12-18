@@ -207,19 +207,6 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
---
--- Contenu de la table `migrations`
---
-
-INSERT INTO `migrations` (`migration`, `batch`) VALUES
-('2014_10_12_000000_create_users_table', 1),
-('2014_10_12_100000_create_password_resets_table', 1),
-('2016_06_09_021546_Tao_TheLoai', 2),
-('2016_06_09_021610_Tao_LoaiTin', 3),
-('2016_06_09_021813_Tao_TinTuc', 4),
-('2016_06_09_022526_Tao_Slide', 5),
-('2016_06_09_022904_Tao_Comment', 6);
-
 -- --------------------------------------------------------
 
 --

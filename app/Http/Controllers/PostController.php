@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Post;
 use App\Models\Topic;
 use Illuminate\Http\Request;
@@ -44,7 +45,9 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $topicId = $post->topic->id;
         $samePosts = Post::where('idLoaiTin', $topicId)->latest()->take(5)->get();
-        return view('customers.posts.show', compact('post', 'samePosts'));
+        $comments = Comment::with('user')->where('idTinTuc', $id)->get();
+
+        return view('customers.posts.show', compact('post', 'samePosts', 'comments'));
     }
 
     /**
